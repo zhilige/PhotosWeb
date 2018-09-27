@@ -1,5 +1,6 @@
 body {
-	background: #f6f6f6;
+	/*background: #f6f6f6;*/
+    background: #EBEBEB;
 }
 
 .header {
@@ -48,12 +49,11 @@ body {
 }
 
 .main-artive {
-	padding-top: 140px;
+	padding-top: 150px;
 	min-height: 1050px;
-	background: #f6f6f6;
+	
 	width: 100%;
 	max-width: 1400px;
-
 	margin: auto;
 	-webkit-column-width: 190px;
 	-moz-column-width: 190px;
@@ -66,16 +66,14 @@ body {
 
 .main-artive div {
 	width: 190px;
-	margin: 4px 0;
+	margin: 20px 0;
 }
 
 .main-artive img {
 	width: 100%;
 	cursor: pointer;
 	transition: all 0.6s;
-	border: 6px solid white;
-	border-radius: 10px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 1px 3px rgba(0,0,0,.02), 0 4px 8px rgba(0,0,0,.02);
 }
 
 .main-artive a {}
@@ -83,6 +81,9 @@ body {
 .main-artive a:hover {
 	opacity: 0.7;
 	transition-duration: 0.6s;
+	box-shadow: 0 1px 3px rgba(0,0,0,.02),0 10px 20px 0px rgba(0,0,0,.12);
+	
+
 }
 
 .main-more {
@@ -126,7 +127,7 @@ body {
 	display: block;
 	margin: 25px auto;
 	width: 60%;
-	max-width: 700px;
+	max-width: 550px;
 }
 
 #caption {

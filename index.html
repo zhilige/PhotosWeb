@@ -1,87 +1,96 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8" />
 		<title>photosWeb</title>
 		<link rel="stylesheet" href="css/style.css" />
-		
+
 	</head>
+
 	<body>
-	   <div class="header">
-	   	<div class="header-logo">
-	   	<a href="#">	<img src="img/P_25.png"/></a>
-	   	</div>
-	   	<div class="header-title">
-	   	<ul>
-	   		<li><a href="#">HOME</a></li>
-	   		<li><a href="#">WORK</a></li>
-	   		<li><a href="#">BLOG</a></li>
-	   		<li><a href="#">CONTACT</a></li>
-	   		<li><a href="#">ABOUT</a></li> 		
-	   	</ul>
-	   	</div>
-	   </div>
-	   <div class="main-artive">
-	   	<div><a href="#"><img src="img/1.jpg"  onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/2.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/3.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/4.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/5.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/6.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/7.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/8.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/9.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/10.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/11.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/12.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/13.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/14.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/15.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/16.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/17.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/18.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		<div><a href="#"><img src="img/19.jpg" onclick="check(src,alt)" alt="model test picture"/></a></div>
-		
-	   	   
-	   	
-	   </div>
-	   
-	   <!--图片模态框 -->
-      <div class="motai" id="mo">
-      <span class="close" id="close">×</span>
-      <img class="motaiimg" id="moimg">
-      <div id="caption"></div>
-      </div>
+		<div class="header">
+			<div class="header-logo">
+				<a href="#"> <img src="img/P_25.png" /></a>
+			</div>
+			<div class="header-title">
+				<ul>
+					<li>
+						<a href="#">HOME</a>
+					</li>
+					<li>
+						<a href="#">PICTURE</a>
+					</li>
+					<li>
+						<a href="#">AlBUM</a>
+					</li>
+					<li>
+						<a href="#">ARTICLE</a>
+					</li>
+					<li>
+						<a href="#">ABOUT</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="main-artive" id="main-content">
+               
+		</div>
 
-	   
-	   <div class="main-more">
-	   	<center><a href="#">LOAD MORE POSTS</a></center>
-	   </div>
-       <div class="footer">
-       	<center>
-       		<img src="img/ress-logo.png" />
-       		<div><a>Copyright @ 2017.Create by Warren</a></div>
-       	</center>
-       </div>
-       
-    
-<script>
-    var motai=document.getElementById('mo')
-    var moimg=document.getElementById("moimg")
-    //var realimg=document.getElementById("real")
-    var caption=document.getElementById("caption")
+		<!--图片模态框 -->
+		<div class="motai" id="mo">
+			<span class="close" id="close">×</span>
+			<img class="motaiimg" id="moimg">
+			<div id="caption"></div>
+		</div>
 
-    function check(src,alt){
-        motai.style.display="block"
-        moimg.src=src
-        caption.innerHTML=alt
-    }
-
-    var span=document.getElementById("close");
-
-    span.onclick=function(){
-        motai.style.display="none";
-    }
-</script>
+		<div class="main-more">
+			<center>
+				<a href="#">LOAD MORE POSTS </a>
+			</center>
+		</div>
+		<div class="footer">
+			<center>
+				<img src="img/ress-logo.png" />
+				<div>
+					<a>Copyright @ 2018.Create by Warren</a>
+				</div>
+			</center>
+		</div>
+        
+        <script type="text/javascript" src="js/imgurl.js" ></script>
+		<script>
+			var motai = document.getElementById('mo')
+			var moimg = document.getElementById("moimg")
+			var caption = document.getElementById("caption")
+            
+            var imgContent = document.getElementById('main-content');
+            
+            var imghtml = ''
+            
+            for(var i= 0 ;i<imgList.length;i++){
+            	
+            	imghtml +=  '<div>'
+				        +'<a href="#"><img src="'+imgList[i].imgurl+'" onclick="check(src,alt)" alt="model test picture" /></a>'
+			            +'</div>'
+            	
+            }
+            imgContent.innerHTML = imghtml;
+            
+            
+            //查看照片
+			function check(src, alt) {
+				motai.style.display = "block"
+				moimg.src = src
+				caption.innerHTML = alt
+			}
+            
+            //关闭模态框
+			var span = document.getElementById("close");
+			span.onclick = function() {
+				motai.style.display = "none";
+			}
+		</script>
 	</body>
+
 </html>
