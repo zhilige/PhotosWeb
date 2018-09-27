@@ -46,7 +46,7 @@
 
 		<div class="main-more">
 			<center>
-				<a href="#">LOAD MORE POSTS </a>
+				<a href="#">LOAD MORE PICTURE </a>
 			</center>
 		</div>
 		<div class="footer">
@@ -66,16 +66,17 @@
             
             var imgContent = document.getElementById('main-content');
             
-            var imghtml = ''
-            
+            var imgHtml = '';
             for(var i= 0 ;i<imgList.length;i++){
             	
-            	imghtml +=  '<div>'
-				        +'<a href="#"><img src="'+imgList[i].imgurl+'" onclick="check(src,alt)" alt="model test picture" /></a>'
-			            +'</div>'
+            	imgHtml +=  `<div>
+				        <a href="#">
+				        <img src="${imgList[i].imgurl}" onclick="check(src,alt)" alt="${imgList[i].desc}" />
+				        </a>
+			            </div>`;
             	
             }
-            imgContent.innerHTML = imghtml;
+            imgContent.innerHTML = imgHtml;
             
             
             //查看照片
@@ -87,9 +88,8 @@
             
             //关闭模态框
 			var span = document.getElementById("close");
-			span.onclick = function() {
-				motai.style.display = "none";
-			}
+			span.onclick = () => motai.style.display = "none";
+			
 		</script>
 	</body>
 
