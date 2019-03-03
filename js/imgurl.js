@@ -5,6 +5,9 @@ var imgList = [{
 	imgurl:'img/2.jpg',
 	desc:'model test picture'
 },{
+	imgurl:'img/20.jpg',
+	desc:'model test picture'
+},{
 	imgurl:'img/3.jpg',
 	desc:'model test picture'
 },{
